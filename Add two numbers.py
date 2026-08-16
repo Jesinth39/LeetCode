@@ -1,6 +1,9 @@
+from typing import List
+
+
 class Solution:
     def addTwoNumbers(self, l1, l2):
-        dummy = ListNode(0)
+        dummy = List(0)
         current = dummy
         carry = 0
         while l1 or l2 or carry:
@@ -8,7 +11,7 @@ class Solution:
             y =l2.val if l2 else 0
             total = x + y + carry
             carry = total // 10
-            current.next = ListNode(total % 10)
+            current.next = List(total % 10)
             current = current.next
             if l1:
                 l1 = l1.next
